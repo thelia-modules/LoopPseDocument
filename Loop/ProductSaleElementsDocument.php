@@ -11,6 +11,7 @@
 /*************************************************************************************/
 namespace LoopPseDocument\Loop;
 
+use Propel\Runtime\ActiveQuery\Criteria;
 use Thelia\Core\Template\Element\BaseLoop;
 use Thelia\Core\Template\Element\LoopResultRow;
 use Thelia\Core\Template\Element\PropelSearchLoopInterface;
@@ -109,14 +110,14 @@ class ProductSaleElementsDocument extends BaseLoop implements PropelSearchLoopIn
                 case "position":
                     $query
                         ->useProductDocumentQuery()
-                        ->orderByPosition()
+                        ->orderByPosition(Criteria::ASC)
                         ->endUse()
                     ;
                     break;
                 case "position-reverse":
                     $query
                         ->useProductDocumentQuery()
-                        ->orderByPosition()
+                        ->orderByPosition(Criteria::DESC)
                         ->endUse()
                     ;
                     break;
