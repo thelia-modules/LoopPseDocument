@@ -5,7 +5,7 @@
         xsi:schemaLocation="http://thelia.net/schema/dic/config http://thelia.net/schema/dic/config/thelia-1.0.xsd">
 
     <loops>
-        <loop class="LoopPseImage\Loop\ProductSaleElementsDocument" name="product-sale-elements-document" />
+        <loop class="LoopPseDocument\Loop\ProductSaleElementsDocument" name="product-sale-elements-document" />
     </loops>
 
     <forms>
